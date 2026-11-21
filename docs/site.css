@@ -319,22 +319,22 @@ button { font: inherit; }
 
 .manual { padding-block: clamp(3.15rem, 7vw, 6.3rem); background: var(--ink); }
 .manual-intro { border-color: var(--ink-line); }
-.manual-intro p, .manual-chapter p, .skill-format p { color: var(--muted-cream); }
+.manual-intro p, .manual-chapter p, .supported-agents p { color: var(--muted-cream); }
 .manual code { color: var(--gold); font-size: .91em; }
 .manual-grid { margin-top: 1.55rem; grid-template-columns: minmax(0, 1.24fr) minmax(0, .86fr); }
 .manual-chapters { display: grid; gap: 1.5rem; }
 .manual-chapter h3 { margin-top: .65rem; font-size: 1.65rem; }
-.manual-chapter p, .skill-format p { margin-top: .4rem; }
+.manual-chapter p, .supported-agents p { margin-top: .4rem; }
 
-.skill-format {
+.supported-agents {
   margin-top: 2.2rem;
   padding-top: 1.2rem;
   border-top: 1px solid var(--ink-line);
 }
 
-.skill-format h3 { font-size: 1.65rem; }
-.skill-format nav { display: flex; flex-wrap: wrap; gap: .25rem 1.3rem; margin-top: .7rem; }
-.skill-format nav a { padding-block: .25rem; color: var(--gold); }
+.supported-agents nav { display: flex; flex-wrap: wrap; gap: .25rem 1.3rem; margin-top: .7rem; }
+.supported-agents a { color: var(--gold); }
+.supported-agents nav a { padding-block: .25rem; }
 
 .manual-list {
   margin: 0;

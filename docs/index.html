@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://insighttful.github.io/mentat/">
   <link rel="icon" href="assets/self-review.webp?v=2" type="image/webp">
-  <link rel="stylesheet" href="site.css?v=5">
+  <link rel="stylesheet" href="site.css?v=6">
   <script src="site.js?v=3" defer></script>
   <title>Mentat | Agent Skills for Recursive Project Guidance</title>
 </head>
@@ -27,7 +27,7 @@
       </a>
       <nav aria-label="Main navigation">
         <a href="#method">Method</a>
-        <a href="#manual">Field manual</a>
+        <a href="#manual">Field Manual</a>
         <a href="https://github.com/Insighttful/mentat">GitHub</a>
       </nav>
     </div>
@@ -43,7 +43,7 @@
             <p class="hero-summary">Let your project keep what it learns. While active, Mentat watches visible user messages for meaningful signals and carries intent into guidance agents can find and follow.</p>
             <div class="hero-actions">
               <a class="button primary" href="#install">Use Mentat in your project</a>
-              <a class="button outlined" href="#manual">Read the field manual</a>
+              <a class="button outlined" href="#manual">Read the Field Manual</a>
             </div>
           </div>
           <figure class="hero-plate">
@@ -158,26 +158,26 @@
       <div class="wrap">
         <div class="section-intro">
           <h2 id="method-title">The Mentat method</h2>
-          <p>While active, watch visible user messages for explicit preferences, recurring corrections, and requests that conflict with project conventions. Resolve the decision before recording a rule.</p>
+          <p>Call <code>mentat</code> to review the visible session for changed preferences, recurring corrections, and explicit decisions. Mentat finds where those decisions belong in your <code>AGENTS.md</code> hierarchy and flags changes that belong in <code>CONSTITUTION.md</code>.</p>
         </div>
         <ol class="method-flow" id="equipment" role="list">
           <li>
             <img src="assets/signal-trace.webp" width="1536" height="1024" loading="lazy"
                  alt="One bright waveform rises from the faint traces on a brass oscilloscope.">
             <h3>Infer</h3>
-            <p>Start with the user's current intent. Use accepted choices and recurring corrections as evidence. A project the user names can help clarify a material choice.</p>
+            <p>Start with the project’s existing rules and intent. Use your input, decisions you’ve confirmed, and recurring corrections as evidence for changes to how the project works.</p>
           </li>
           <li>
             <img src="assets/compare-cards.webp" width="1536" height="1024" loading="lazy"
                  alt="Two punch cards show matching branching patterns, with one green-lit hole marking their difference.">
             <h3>Diagnose</h3>
-            <p>Check whether a rule was missing, hard to find, or ignored. Compare the user's goal with what the current convention protects. Keep a compatible route when it achieves the goal at similar effort. If a material trade-off remains, explain it and ask one focused question.</p>
+            <p>Check whether existing guidance already covers your correction and whether the agent followed it. When you’ve authorized guidance edits, Mentat can record explicit standing decisions during the review. It proposes inferred rules for you to confirm.</p>
           </li>
           <li>
             <img src="assets/rule-punch.webp" width="1536" height="1024" loading="lazy"
                  alt="A brass punch press records one meaningful hole in a clean rule card.">
             <h3>Place</h3>
-            <p>Record only the missing condition, action, or exception. Put the approved operating rule in the nearest applicable <code>AGENTS.md</code>. Use root <code>AGENTS.md</code> for project-wide operating rules.</p>
+            <p>Place operating conventions in the nearest applicable <code>AGENTS.md</code>. Use the root guide for project-wide operating rules. If a decision changes project-wide authority, a durable priority, or a hard constraint, Mentat asks you to approve the exact <code>CONSTITUTION.md</code> edit.</p>
           </li>
         </ol>
 
@@ -185,13 +185,13 @@
           <figure class="field-plate">
             <img src="assets/exception-dialogue.webp" width="1254" height="1254" loading="lazy" decoding="async"
                  alt="Two colleagues exchange a focused look beside a glowing recursive instrument panel.">
-            <figcaption>When a material exception has unclear scope, ask one focused question.</figcaption>
+            <figcaption><em>When a material exception has unclear scope, ask one focused question.</em></figcaption>
           </figure>
           <div class="field-copy">
-            <h3>When preferences collide</h3>
-            <blockquote>“Use this new dependency in the migration tool.”</blockquote>
-            <p>The migration guide prefers a built-in feature because it is easier to maintain. Mentat checks whether that feature meets the user's goal at similar effort. If it does, use it. If it loses a required capability, explain the trade-off and ask whether the dependency is for this task or a standing change.</p>
-            <p>With approval, record a task-specific exception or place a durable rule in the migration guide. Keep a wider principle at root only when evidence supports its wider scope. Mentat applies the same checks to its own instructions.</p>
+            <h3>Like knowing each other’s thoughts</h3>
+            <blockquote>“It should work this way, but why should I have to tell you that?”</blockquote>
+            <p>Your team usually adds an external dependency for migrations. In this project, you’ve made it clear that the built-in feature should come first when it meets the requirement. Mentat picks up the change from your conversation and records it in the migration guide when authorized.</p>
+            <p>Routine decisions go in the guide that owns them. Constitutional changes come back to you for approval. The next agent can pick up your decision where it applies, so you can say it once.</p>
           </div>
         </div>
       </div>
@@ -200,7 +200,7 @@
     <section class="manual" id="manual" aria-labelledby="manual-title">
       <div class="wrap">
         <div class="section-intro manual-intro">
-          <h2 id="manual-title">Field manual</h2>
+          <h2 id="manual-title">Field Manual</h2>
           <p>Project ontology links each rule to its governing guide. The manual covers recursive review, scoped hierarchy, and human-in-the-loop (HITL) approval.</p>
         </div>
         <div class="manual-grid">
@@ -238,14 +238,9 @@
             </figure>
           </div>
         </div>
-        <div class="skill-format">
-          <h3>Claude Code bridge</h3>
-          <p>The root <code>CLAUDE.md</code> has exactly two lines.</p>
-          <pre><code>@CONSTITUTION.md
-@AGENTS.md</code></pre>
-          <p>Root <code>AGENTS.md</code> tells agents to read the applicable guide chain from each work path up to the root. Each existing guide links to its parent and direct children. Add a guide only when its scope needs its own rules or navigation.</p>
-          <h3>Agent Skills format</h3>
-          <p>Mentat packages meta-thinking and recursive self-review in a concise <code>SKILL.md</code> with optional references. Installation and availability vary by agent.</p>
+        <section class="supported-agents" id="supported-agents" aria-labelledby="supported-agents-title">
+          <h2 id="supported-agents-title">Supported Agents</h2>
+          <p>Mentat works with agents that support the industry-standard <a href="https://agentskills.io/specification">Agent Skills specification</a>.</p>
           <nav aria-label="Agent Skills documentation">
             <a href="https://developers.openai.com/codex/skills">Codex</a>
             <a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt">ChatGPT</a>
@@ -255,7 +250,7 @@
             <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills">Hermes Agent</a>
             <a href="https://docs.pi.dev/latest/skills">Pi</a>
           </nav>
-        </div>
+        </section>
       </div>
     </section>
 
