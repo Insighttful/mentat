@@ -4,9 +4,14 @@ const status = document.querySelector("#copy-status");
 const agent = document.querySelector("#install-agent");
 const installCommand = command.textContent;
 
+function updateInstallCommand() {
+  command.textContent = agent.value ? `${installCommand} ${agent.value}` : installCommand;
+}
+
+updateInstallCommand();
 document.querySelector("#install-actions").hidden = false;
 agent.addEventListener("change", () => {
-  command.textContent = agent.value ? `${installCommand} ${agent.value}` : installCommand;
+  updateInstallCommand();
   copyButton.textContent = "Copy command";
   status.textContent = "Install command updated.";
 });
