@@ -40,6 +40,8 @@
   --display: Fraunces, Georgia, serif;
   --body: system-ui, sans-serif;
   --mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --radius-control: .55rem;
+  --radius-frame: .95rem;
   --layout: 82rem;
   --gutter: clamp(1rem, 4.2vw, 4rem);
 }
@@ -193,14 +195,14 @@ button { font: inherit; }
 .hero-summary { margin-top: .85rem; color: var(--muted-cream); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
 
-.button, .copy {
+.button, .copy, .agent-select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
   padding: .63rem .9rem;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: var(--radius-control);
   cursor: pointer;
   font-size: .93rem;
   font-weight: 700;
@@ -216,6 +218,7 @@ button { font: inherit; }
 .hero-plate {
   overflow: hidden;
   border: 1px solid var(--gold);
+  border-radius: var(--radius-frame);
   background: var(--deep-ink);
 }
 
@@ -230,17 +233,22 @@ button { font: inherit; }
 
 .install {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: .7rem clamp(.85rem, 2vw, 1.65rem);
   margin-top: 1.3rem;
   padding: .65rem;
   border: 1px solid var(--ink-line);
+  border-radius: var(--radius-frame);
   background: var(--deep-ink);
 }
 
-.install-label { padding-inline-start: .5rem; color: var(--olive); font-size: .85rem; font-weight: 660; }
+.install-text { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; min-width: 0; }
+.install-label { color: var(--olive); font-size: .85rem; font-weight: 660; }
 .install code { min-width: 0; overflow-wrap: anywhere; color: var(--cream); font-size: clamp(.82rem, 1.3vw, 1.02rem); }
+.install-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.agent-select { background: var(--deep-ink); color: var(--cream); border-color: var(--paper-rule); }
+.agent-select:hover { border-color: var(--gold); }
 .copy { min-width: 8.5rem; }
 
 .paper {
@@ -278,6 +286,7 @@ button { font: inherit; }
 .method-flow img, .manual-chapter img {
   aspect-ratio: 3 / 2;
   border: 1px solid var(--paper-rule);
+  border-radius: var(--radius-frame);
   object-fit: cover;
 }
 
@@ -350,8 +359,7 @@ button { font: inherit; }
   .hero-text { max-width: 34rem; }
   .hero-text h1 { font-size: clamp(5.15rem, 16vw, 7.15rem); }
   .hero-lead { text-wrap: initial; }
-  .install { grid-template-columns: minmax(0, 1fr) auto; }
-  .install-label { grid-column: 1 / -1; padding-inline-start: 0; }
+  .install { grid-template-columns: minmax(0, 1fr); }
   .section-intro { grid-template-columns: 1fr; }
   .field-example, .manual-grid { gap: 1.7rem 1.5rem; }
 }
@@ -362,8 +370,7 @@ button { font: inherit; }
   .departure { padding-block: 1.4rem 1.7rem; }
   .hero-actions .button { flex: 1 1 auto; }
   .install { padding: .7rem; gap: .5rem; }
-  .install code { grid-column: 1 / -1; }
-  .copy { grid-column: 1 / -1; justify-self: start; min-width: 0; }
+  .install-actions > * { min-width: 0; }
   .method-flow { grid-template-columns: 1fr; }
   .method-flow li + li { padding-top: .85rem; border-top: 1px solid var(--paper-rule); }
   .field-example, .manual-grid { grid-template-columns: 1fr; }

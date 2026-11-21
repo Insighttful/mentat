@@ -7,14 +7,14 @@
   <meta name="description" content="Mentat is an Agent Skill for recursive self-review, human-in-the-loop decisions, and scoped AGENTS.md guidance. Explore project context, hierarchy, and ontology.">
   <meta property="og:title" content="Mentat | An expedition into project context">
   <meta property="og:description" content="Teach agents how your project makes decisions. An Agent Skill for instruction hierarchy, human judgement, and recursive self-review.">
-  <meta property="og:image" content="https://insighttful.github.io/mentat/assets/self-review.webp">
-  <meta property="og:image:alt" content="Two expedition analysts compare a recursive cyber-brain diagram on a brass analog computer.">
+  <meta property="og:image" content="https://insighttful.github.io/mentat/assets/self-review.webp?v=2">
+  <meta property="og:image:alt" content="Two expedition analysts compare a recursive Grey alien brain diagram on a brass analog computer.">
   <meta property="og:url" content="https://insighttful.github.io/mentat/">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://insighttful.github.io/mentat/">
-  <link rel="icon" href="assets/self-review.webp" type="image/webp">
-  <link rel="stylesheet" href="site.css">
-  <script src="site.js" defer></script>
+  <link rel="icon" href="assets/self-review.webp?v=2" type="image/webp">
+  <link rel="stylesheet" href="site.css?v=2">
+  <script src="site.js?v=2" defer></script>
   <title>Mentat | Agent Skills for Recursive Project Guidance</title>
 </head>
 <body>
@@ -47,16 +47,26 @@
             </div>
           </div>
           <figure class="hero-plate">
-            <img src="assets/self-review.webp" width="1536" height="1024" fetchpriority="high"
-                 alt="Two expedition analysts leaning toward a brass computer look at a glowing brain diagram that contains a smaller copy of itself.">
+            <img src="assets/self-review.webp?v=2" width="1536" height="1024" fetchpriority="high"
+                 alt="Two expedition analysts look at a brass computer displaying a Grey alien brain scan with nested copies.">
             <figcaption>Self Review. Apply the same reasoning to the instruction that produced the result.</figcaption>
           </figure>
         </div>
 
         <div class="install" id="install" role="group" aria-labelledby="install-label">
-          <span class="install-label" id="install-label">Run in your project</span>
-          <code id="install-command">npx skills add Insighttful/mentat --skill mentat</code>
-          <button class="copy" id="copy-command" type="button" hidden>Copy command</button>
+          <div class="install-text">
+            <span class="install-label" id="install-label">Install from GitHub</span>
+            <code id="install-command">npx skills add Insighttful/mentat --skill mentat</code>
+          </div>
+          <div class="install-actions" id="install-actions" hidden>
+            <label class="sr-only" for="install-agent">Install for</label>
+            <select class="agent-select" id="install-agent">
+              <option value="">Default · Project</option>
+              <option value="--global --agent hermes-agent">Hermes Agent · Global</option>
+              <option value="--agent pi">Pi · Project</option>
+            </select>
+            <button class="copy" id="copy-command" type="button">Copy command</button>
+          </div>
           <span class="sr-only" id="copy-status" role="status"></span>
         </div>
       </div>
@@ -76,7 +86,7 @@
             <p>Find the judgement behind the feedback.</p>
           </li>
           <li>
-            <img src="assets/assess.webp" width="1536" height="1024" loading="lazy"
+            <img src="assets/assess.webp?v=2" width="1536" height="1024" loading="lazy"
                  alt="The analysts exchange a glance as they compare two punch cards against an illuminated project map.">
             <h3>Assess</h3>
             <p>Check its scope and whether an existing rule already covers it.</p>
@@ -117,8 +127,8 @@
               <p>Root <code>CONSTITUTION.md</code> sets project principles. Its changes require human-in-the-loop (HITL) approval.</p>
             </article>
             <article class="manual-chapter">
-              <img src="assets/hierarchy.webp" width="1536" height="1024" loading="lazy"
-                   alt="One lit path links smaller chambers to their parents in a recursively branching archive.">
+              <img src="assets/hierarchy.webp?v=2" width="1536" height="1024" loading="lazy"
+                   alt="One lit path links smaller Grey brain chambers to their parents in a recursively branching archive.">
               <h3>Instruction hierarchy</h3>
               <p>Each <code>AGENTS.md</code> adds rules for its scope. Load missing guidance from the work path to the root.</p>
             </article>
@@ -142,6 +152,8 @@
             <a href="https://code.claude.com/docs/en/skills">Claude Code</a>
             <a href="https://opencode.ai/docs/skills/">OpenCode</a>
             <a href="https://docs.windsurf.com/windsurf/cascade/skills">Windsurf</a>
+            <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills">Hermes Agent</a>
+            <a href="https://docs.pi.dev/latest/skills">Pi</a>
           </nav>
         </div>
       </div>
@@ -151,6 +163,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <a href="https://github.com/Insighttful">Insighttful</a>
+      <a href="https://www.skills.sh/insighttful/mentat/mentat">Mentat on skills.sh</a>
       <a href="https://agentskills.io/specification">Agent Skills specification</a>
     </div>
   </footer>
