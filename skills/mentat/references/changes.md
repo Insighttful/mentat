@@ -1,7 +1,25 @@
 # Changes
 
-- Put durable project principles in `CONSTITUTION.md`. Use `AGENTS.md` for rules that guide daily work. If a local rule conflicts with the constitution, follow the constitution. If the governing rule covers the case, remove the conflicting local text within project authority. Keep compatible local detail. Use a link if the local guide needs a pointer.
-- For a proposal, show the current rule, the exact new text, the reason, and the affected scope. If intent is unclear, show the conflicting clauses and ask for a decision.
-- Check your authority to edit this skill. Preserve approval requirements during cleanup.
-- For a cleanup, check that scope, meaning, and permissions stay the same. Remove a duplicate only if the surviving rule covers the same cases.
-- After an edit, check affected guides and changed links. For a rule change, test a case inside its scope and one outside. Use existing project checks when they cover the change.
+## Route by Scope and Force
+
+- Keep one-task directions with the task. Put a persistent operating rule in the nearest `AGENTS.md` that covers its work. Root `AGENTS.md` owns rules that guide project-wide operations. Broad reach alone does not make a rule constitutional.
+- Propose a `CONSTITUTION.md` change only when every test passes:
+  1. It governs materially different parts of this project.
+  2. It remains important across changes to tools, workflow, or module layout.
+  3. It sets a project-wide authority boundary, hard constraint, or material priority that ordinary operating rules must obey.
+  4. Evidence shows this is the owner’s intent.
+- A principle inferred from one branch stays there until evidence supports wider scope. If any constitutional test is unclear, ask or keep the candidate scoped. Do not infer approval from silence, repetition, a missing Constitution, or a similar project’s files.
+
+## Get Approval
+
+- Before creating or editing `CONSTITUTION.md`, show the current rule or state that it is absent. Give the exact proposed text, evidence, scope, and decision it changes. Wait for explicit approval of that text.
+- Read the affected text again before writing. If the current text, proposed wording, or effect differs from the approved proposal, show the revised proposal and get approval again.
+- If `AGENTS.md` conflicts with the Constitution, follow the Constitution. Remove the conflicting local text when authorized. Keep compatible detail and link to its authority.
+- For every proposal, make the destination and any approval still needed explicit.
+
+**Example.** “Run the release checklist before publishing” is an operating rule for root `AGENTS.md`. “Only a human can authorize a public release” sets a project-wide authority boundary. Propose it for `CONSTITUTION.md` only when the owner’s intent supports it and all four tests pass.
+
+## Verify
+
+- After an authorized edit, verify affected guides and links at both ends. Replay one case inside scope and one nearby case outside it.
+- For edits to Mentat, replay the same scenario before and after. Verify its boundary case, affected references, and approval requirements.
