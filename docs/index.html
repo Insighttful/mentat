@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112522">
+  <meta name="description" content="Mentat is an Agent Skill for recursive self-review, human-in-the-loop decisions, and scoped AGENTS.md guidance. Explore project context, hierarchy, and ontology.">
+  <meta property="og:title" content="Mentat | An expedition into project context">
+  <meta property="og:description" content="Teach agents how your project makes decisions. An Agent Skill for instruction hierarchy, human judgement, and recursive self-review.">
+  <meta property="og:image" content="https://insighttful.github.io/mentat/assets/self-review.webp">
+  <meta property="og:image:alt" content="Two expedition analysts compare a recursive cyber-brain diagram on a brass analog computer.">
+  <meta property="og:url" content="https://insighttful.github.io/mentat/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://insighttful.github.io/mentat/">
+  <link rel="icon" href="assets/self-review.webp" type="image/webp">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
+  <title>Mentat | Agent Skills for Recursive Project Guidance</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="./" aria-label="Mentat by Insighttful">
+        <span class="orbit" aria-hidden="true"></span>
+        <strong>Mentat</strong><span class="brand-author">/ Insighttful</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#method">Method</a>
+        <a href="#manual">Field manual</a>
+        <a href="https://github.com/Insighttful/mentat">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="departure" aria-labelledby="title">
+      <div class="wrap">
+        <div class="hero">
+          <div class="hero-text">
+            <h1 id="title">Mentat</h1>
+            <p class="hero-lead">Teach agents how your project makes decisions.</p>
+            <p class="hero-summary">Let your project keep what it learns. Mentat turns human judgement into scoped rules agents can find and follow.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#install">Use Mentat in your project</a>
+              <a class="button outlined" href="#manual">Read the field manual</a>
+            </div>
+          </div>
+          <figure class="hero-plate">
+            <img src="assets/self-review.webp" width="1536" height="1024" fetchpriority="high"
+                 alt="Two expedition analysts leaning toward a brass computer look at a glowing brain diagram that contains a smaller copy of itself.">
+            <figcaption>Self Review. Apply the same reasoning to the instruction that produced the result.</figcaption>
+          </figure>
+        </div>
+
+        <div class="install" id="install" role="group" aria-labelledby="install-label">
+          <span class="install-label" id="install-label">Run in your project</span>
+          <code id="install-command">npx skills add Insighttful/mentat --skill mentat</code>
+          <button class="copy" id="copy-command" type="button" hidden>Copy command</button>
+          <span class="sr-only" id="copy-status" role="status"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper" id="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2 id="method-title">The Mentat method</h2>
+          <p>Trace a correction to the decision it should change. Keep the smallest rule that carries that judgement into future work.</p>
+        </div>
+        <ol class="method-flow" role="list">
+          <li>
+            <img src="assets/identify.webp" width="1536" height="1024" loading="lazy"
+                 alt="An analyst marks one bright signal on an analog oscilloscope.">
+            <h3>Identify</h3>
+            <p>Find the judgement behind the feedback.</p>
+          </li>
+          <li>
+            <img src="assets/assess.webp" width="1536" height="1024" loading="lazy"
+                 alt="The analysts exchange a glance as they compare two punch cards against an illuminated project map.">
+            <h3>Assess</h3>
+            <p>Check its scope and whether an existing rule already covers it.</p>
+          </li>
+          <li>
+            <img src="assets/encode.webp" width="1536" height="1024" loading="lazy"
+                 alt="A brass punch press records one meaningful hole in a clean rule card.">
+            <h3>Encode</h3>
+            <p>Keep one rule in the narrowest guide that covers it.</p>
+          </li>
+        </ol>
+
+        <div class="field-example">
+          <div class="field-copy">
+            <h3>Care to compare notes?</h3>
+            <blockquote>“Check the deployed schema before you plan the migration.”</blockquote>
+          </div>
+          <div class="field-copy">
+            <p>If the guide already says this, check whether the agent had the rule in context and followed it. If the rule is missing, propose it in the guide that governs migrations.</p>
+            <p>When the failure traces back to <em>Mentat</em>, it applies the same method to its own instructions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manual" id="manual" aria-labelledby="manual-title">
+      <div class="wrap">
+        <div class="section-intro manual-intro">
+          <h2 id="manual-title">Field manual</h2>
+          <p>Project ontology makes each rule traceable to the guide that owns it. Optional references go deeper when the case calls for them.</p>
+        </div>
+        <div class="manual-grid">
+          <div class="manual-chapters">
+            <article class="manual-chapter">
+              <img src="assets/authority.webp" width="1536" height="1024" loading="lazy"
+                   alt="A human operator holds the approval key beside the archive's sealed governing folio.">
+              <h3>Primarch</h3>
+              <p>Root <code>CONSTITUTION.md</code> sets project principles. Its changes require human-in-the-loop (HITL) approval.</p>
+            </article>
+            <article class="manual-chapter">
+              <img src="assets/hierarchy.webp" width="1536" height="1024" loading="lazy"
+                   alt="One lit path links smaller chambers to their parents in a recursively branching archive.">
+              <h3>Instruction hierarchy</h3>
+              <p>Each <code>AGENTS.md</code> adds rules for its scope. Load missing guidance from the work path to the root.</p>
+            </article>
+          </div>
+
+          <ul class="manual-list" aria-label="Skill and references">
+            <li><a href="https://github.com/Insighttful/mentat/blob/main/skills/mentat/SKILL.md"><strong>Standing Orders</strong><span>Read the core SKILL.md.</span></a></li>
+            <li><a href="https://github.com/Insighttful/mentat/blob/main/skills/mentat/references/hierarchy.md"><strong>Hierarchy</strong><span>Find the rules that govern a work path.</span></a></li>
+            <li><a href="https://github.com/Insighttful/mentat/blob/main/skills/mentat/references/rules.md"><strong>Rules</strong><span>Turn corrections into the smallest useful change.</span></a></li>
+            <li><a href="https://github.com/Insighttful/mentat/blob/main/skills/mentat/references/changes.md"><strong>Changes</strong><span>Check conflicts, authority, and scope.</span></a></li>
+            <li><a href="https://github.com/Insighttful/mentat/blob/main/skills/mentat/references/review.md"><strong>Project Review</strong><span>Check alignment in Ponytail mode.</span></a></li>
+            <li><a href="https://github.com/Insighttful/mentat/blob/main/skills/mentat/references/self-review.md"><strong>Self Review</strong><span>Use metacognition to review Mentat's own instructions.</span></a></li>
+          </ul>
+        </div>
+        <div class="skill-format">
+          <h3>Agent Skills format</h3>
+          <p>Mentat packages meta-thinking and recursive self-review in a concise <code>SKILL.md</code> with optional references. Installation and availability vary by agent.</p>
+          <nav aria-label="Agent Skills documentation">
+            <a href="https://developers.openai.com/codex/skills">Codex</a>
+            <a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt">ChatGPT</a>
+            <a href="https://code.claude.com/docs/en/skills">Claude Code</a>
+            <a href="https://opencode.ai/docs/skills/">OpenCode</a>
+            <a href="https://docs.windsurf.com/windsurf/cascade/skills">Windsurf</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a href="https://github.com/Insighttful">Insighttful</a>
+      <a href="https://agentskills.io/specification">Agent Skills specification</a>
+    </div>
+  </footer>
+</body>
+</html>
