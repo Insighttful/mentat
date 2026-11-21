@@ -283,12 +283,19 @@ button { font: inherit; }
   list-style: none;
 }
 
-.method-flow img, .manual-chapter img {
+.method-flow img, .field-plate img, .manual-chapter img, .manual-plate img {
   aspect-ratio: 3 / 2;
   border: 1px solid var(--paper-rule);
   border-radius: var(--radius-frame);
   object-fit: cover;
 }
+
+.field-plate figcaption, .manual-plate figcaption {
+  margin-top: .45rem;
+  font-size: .92rem;
+}
+.field-plate figcaption { color: var(--olive-ink); }
+.manual-plate figcaption { color: var(--muted-cream); }
 
 .method-flow h3 { margin-top: .85rem; font-size: 1.85rem; }
 .method-flow p { margin-top: .45rem; font-size: .94rem; }
@@ -299,11 +306,11 @@ button { font: inherit; }
   gap: 2.15rem clamp(1.5rem, 5vw, 5rem);
 }
 
-.field-example { align-items: end; margin-top: clamp(2.1rem, 5vw, 4.5rem); }
+.field-example { align-items: center; margin-top: clamp(2.1rem, 5vw, 4.5rem); }
 .field-copy h3 { font-size: clamp(2rem, 3.8vw, 3.45rem); }
 
 .field-copy blockquote {
-  margin-top: 1.1rem;
+  margin-block: 1.1rem;
   padding-inline-start: .9rem;
   border-inline-start: 1px solid var(--vermilion);
   color: var(--ink);
@@ -334,7 +341,6 @@ button { font: inherit; }
 .manual-list {
   margin: 0;
   padding: 0;
-  align-self: start;
   border-top: 1px solid var(--ink-line);
   list-style: none;
 }
@@ -352,6 +358,7 @@ button { font: inherit; }
 .manual-list span { color: var(--muted-cream); font-size: .94rem; }
 .manual-list a:hover { color: var(--gold); background: var(--deep-ink); }
 .manual-list a:hover strong { text-decoration: underline; }
+.manual-plate { margin-top: 1.5rem; }
 .site-footer { background: var(--deep-ink); border-top: 1px solid var(--ink-line); }
 
 @media (max-width: 53rem) {
