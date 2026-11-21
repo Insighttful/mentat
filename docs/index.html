@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://insighttful.github.io/mentat/">
   <link rel="icon" href="assets/self-review.webp?v=2" type="image/webp">
-  <link rel="stylesheet" href="site.css?v=6">
-  <script src="site.js?v=3" defer></script>
+  <link rel="stylesheet" href="site.css?v=7">
+  <script src="site.js?v=4" defer></script>
   <title>Mentat | Agent Skills for Recursive Project Guidance</title>
 </head>
 <body>
@@ -56,7 +56,7 @@
         <div class="install" id="install" role="group" aria-labelledby="install-label">
           <div class="install-text">
             <span class="install-label" id="install-label">Install from GitHub</span>
-            <code id="install-command">npx skills add Insighttful/mentat --skill mentat</code>
+            <code id="install-command">npx skills add Insighttful/mentat --skill mentat -g -y</code>
           </div>
           <div class="install-actions" id="install-actions" hidden>
             <label class="sr-only" for="install-agent">Install for</label>
@@ -73,7 +73,7 @@
                 <option value="--agent cline">Cline</option>
                 <option value="--agent amp">Amp</option>
                 <option value="--agent antigravity">Antigravity</option>
-                <option value="--global --agent hermes-agent">Hermes Agent · Global</option>
+                <option value="--agent hermes-agent">Hermes Agent</option>
                 <option value="--agent pi">Pi</option>
               </optgroup>
               <optgroup label="More agents">
@@ -95,7 +95,7 @@
                 <option value="--agent devin">Devin for Terminal</option>
                 <option value="--agent dexto">Dexto</option>
                 <option value="--agent droid">Droid</option>
-                <option value="--agent eve">Eve</option>
+                <option value="--agent eve" data-project-only>Eve · Project only</option>
                 <option value="--agent firebender">Firebender</option>
                 <option value="--agent forgecode">ForgeCode</option>
                 <option value="--agent fx">fx</option>
@@ -124,7 +124,7 @@
                 <option value="--agent openhands">OpenHands</option>
                 <option value="--agent pochi">Pochi</option>
                 <option value="--agent posit-assistant">Posit Assistant</option>
-                <option value="--agent promptscript">PromptScript</option>
+                <option value="--agent promptscript" data-project-only>PromptScript · Project only</option>
                 <option value="--agent qoder">Qoder</option>
                 <option value="--agent qoder-cn">Qoder CN</option>
                 <option value="--agent qwen-code">Qwen Code</option>
@@ -145,9 +145,9 @@
                 <option value="--agent zencoder">Zencoder</option>
                 <option value="--agent zenflow">Zenflow</option>
               </optgroup>
-              <option value="">Auto-detect · Project</option>
+              <option value="">Auto-detect · Global</option>
             </select>
-            <button class="copy" id="copy-command" type="button">Copy command</button>
+            <button class="copy" id="copy-command" type="button"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="1.75" width="9" height="9" rx="1.5"/><path d="M11 10.75v2A1.5 1.5 0 0 1 9.5 14.25h-6A1.5 1.5 0 0 1 2 12.75v-6a1.5 1.5 0 0 1 1.5-1.5H5"/></svg><span>Copy</span></button>
           </div>
           <span class="sr-only" id="copy-status" role="status"></span>
         </div>
@@ -158,7 +158,7 @@
       <div class="wrap">
         <div class="section-intro">
           <h2 id="method-title">The Mentat method</h2>
-          <p>Call <code>mentat</code> to review the visible session for changed preferences, recurring corrections, and explicit decisions. Mentat finds where those decisions belong in your <code>AGENTS.md</code> hierarchy and flags changes that belong in <code>CONSTITUTION.md</code>.</p>
+          <p>Call Mentat to review the visible session for changed preferences, recurring corrections, and explicit decisions. Mentat finds where those decisions belong in your <code>AGENTS.md</code> hierarchy and flags changes that belong in <code>CONSTITUTION.md</code>.</p>
         </div>
         <ol class="method-flow" id="equipment" role="list">
           <li>

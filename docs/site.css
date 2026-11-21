@@ -211,6 +211,8 @@ button { font: inherit; }
 }
 
 .primary, .copy { background: var(--vermilion); color: #fff4de; }
+.copy { gap: .5rem; }
+.copy svg { flex: none; }
 .primary:hover, .copy:hover { background: var(--vermilion-hover); }
 .outlined { border-color: var(--gold); color: var(--cream); }
 .outlined:hover { background: var(--cream); color: var(--ink); }
@@ -223,6 +225,8 @@ button { font: inherit; }
 }
 
 .hero-plate img { aspect-ratio: 3 / 2; object-fit: cover; }
+
+figcaption { font-family: var(--mono); font-style: italic; }
 
 .hero-plate figcaption {
   padding: .7rem .9rem;
