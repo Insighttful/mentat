@@ -1,6 +1,6 @@
 # Mentat
 
-![Two expedition analysts study a recursive Grey alien brain scan on a brass console.](docs/assets/self-review.webp)
+![A glowing-brained Mentat studies a recursive decision map with two expedition teammates in a golden lunar control room.](docs/assets/mentat-hero-wardrobe.webp)
 
 Mentat is an Agent Skill by [Insighttful](https://github.com/Insighttful) that aligns user intent with project conventions. It turns corrections and standing preferences into scoped `AGENTS.md` rules, with human-approved changes to `CONSTITUTION.md`.
 
